@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml" >
+  <title>Untitled Page</title>
+  <script type = "text/javascript" >
+  function changeHashOnLoad() {
+ window.location.href += "#";
+ setTimeout("changeHashAgain()", "50"); 
+ }
+
+function changeHashAgain() {
+	//session_destroy();
+window.location.href += "1";
+}
+
+var storedHash = window.location.hash;
+ window.setInterval(function () {
+ if (window.location.hash != storedHash) {
+     window.location.hash = storedHash;
+}
+}, 50);
+
+
+</script>
+ </head>
+ <body onload="changeHashOnLoad(); ">
+  To proceed login again
+  
+  <a href="mainpage.php" target="_blank">Login</a>
+
+ </body>
+ </html>`
